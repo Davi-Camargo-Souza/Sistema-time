@@ -2,7 +2,7 @@
     session_start();
     include("config.php");
     $usuario = $_POST["usuario"];
-    $senha = $_POST["senha"];
+    $senha = md5($_POST["senha"]);
 
     $sql = "SELECT * FROM usuarios
             WHERE email = '{$usuario}'

@@ -11,7 +11,7 @@
             (nome, email, senha, 
             dtaNasc, dtaCadastro)
             VALUES ('{$nome}', '{$email}',
-            '{$senha}', '{$dtaNasc}', 
+            md5('{$senha}'), '{$dtaNasc}', 
             '{$dtaCadastro}')";
 
     try {

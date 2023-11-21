@@ -34,7 +34,7 @@
                                 <div>
                                     <div class="mb-3">
                                         <label for="Password">Senha</label>
-                                        <input id="senha" type="password" name="senha" class="form-control" title="Insira sua senha." required>
+                                        <input id="senha" type="password" name="senha" class="form-control" pattern='/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*(),.?":{}|<>]).{8,}$/' title="8 caracteres, 1 letra minuscula, 1 maiuscula e 1 caractere especial" required>
                                     </div>
                                 </div>
                                 <div>
