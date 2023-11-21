@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Jaguara</title>
+    <title>Cadastro Jaguara</title>
     <link rel="shortcut icon" href="imgs/escudo-favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
@@ -15,14 +15,20 @@
                 <div class="col-lg-4 offset-lg-4">
                     <div class="card border-danger">
                         <div class="card-body">
-                            <h2>Faça login para continuar!</h2>
+                            <h2>Cadastre-se!</h2>
                         </div>
                         <div class="card-body">
-                            <form action="login.php" method="POST">
+                            <form action="cadastrar.php" method="POST">
                                 <div>
                                     <div class="mb-3">
-                                        <label for="User">Usuário</label>
-                                        <input id="usuario" type="email" name="usuario" class="form-control" title="Insira seu E-mail." required>
+                                        <label for="Name">Nome</label>
+                                        <input id="usuario" type="text" name="nome" class="form-control" title="Insira seu nome." required>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="mb-3">
+                                        <label for="User">Email</label>
+                                        <input id="usuario" type="email" name="email" class="form-control" title="Insira seu E-mail." required>
                                     </div>
                                 </div>
                                 <div>
@@ -33,8 +39,14 @@
                                 </div>
                                 <div>
                                     <div class="mb-3">
+                                        <label for="Birthday">Data de Nascimento</label>
+                                        <input id="senha" type="date" name="date" class="form-control" title="Insira a data do seu nascimento." required>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="mb-3">
                                         <button id="botaoEnviar" type="submit" class="btn btn-danger">Enviar</button>
-                                        <a href="cadastro.php" class="btn btn-danger">Cadastrar-se</a>
+                                        <a href="index.php" class="btn btn-danger">Login</a>
                                     </div>
                                 </div>
                             </form>
