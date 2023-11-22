@@ -1,5 +1,12 @@
 <?php
     session_start();
+
+    $regex = '/^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[!@#$%^&*()_+])[A-Za-z\d!@#$%^&*()_+]{8,}$/';
+    if (!preg_match($regex, $_POST["senha"])){
+        header("Location: cadastro.php?error=invalid_password");
+        exit();
+    };
+
     include("config.php");
     $nome = $_POST["nome"];
     $email = $_POST["email"];
@@ -16,7 +23,9 @@
 
     try {
         if ($conn->query($sql) === TRUE) {
-            print "<script>location.href='index.php'</script>";
+            header("Location: index.php");
+            $conn->close();
+            exit();
         }
     } catch (mysqli_sql_exception $e) {
         if ($e->getCode() == 1062) {
