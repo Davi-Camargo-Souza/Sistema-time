@@ -5,7 +5,7 @@
         exit();
     };
     
-    $inatividade = 1800; // 30 minutos (em segundos)
+    $inatividade = 1800; // 30 minutos
 
     if (isset($_SESSION['ultima_atividade']) && (time() - $_SESSION['ultima_atividade']) > $inatividade) {
         session_unset();
@@ -39,7 +39,7 @@
                 <a class="nav-link" href="#">HYpe</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">HYpe</a>
+                <a class="nav-link" href="logout.php">sair</a>
             </li>
         </ul>
     </header>
@@ -76,18 +76,20 @@
                                         <div class="mb-3">
                                             <label for="funcao">Função</label>
                                             <br>
-                                            <input id="jogadorRadio" onclick="mudarOpcoes('jogador')" type="radio" name="funcao" id="jogador">Jogador
-                                            <input id="tecnicoRadio" onclick="mudarOpcoes('tecnico')" type="radio" name="funcao" id="tecnico">Técnico
+                                            <input id="jogadorRadio" onclick="mudarOpcoes('jogador')" type="radio" name="funcao" value="Jogador" id="jogador">Jogador
+                                            <input id="tecnicoRadio" onclick="mudarOpcoes('tecnico')" type="radio" name="funcao" value="Tecnico" id="tecnico">Técnico
                                         </div>
                                     </div>
                                     <div>
                                         <div class="mb-3">
                                             <label for="categoria">Categoria</label>
-                                            <select id="categorias" class="custom-select">
+                                            <select id="categorias" class="custom-select" name="categoria" onchange="selecionarCamisa()">
                                                 <option selected>Escolha a categoria</option>
-                                                <option value=""></option>
+                                                <option></option>
                                             </select>
                                         </div>
+                                    </div>
+                                    <div id="selecaoNumeros">
                                     </div>
                                     <div>
                                         <div class="mb-3">

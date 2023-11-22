@@ -5,7 +5,7 @@
         exit();
     };
     
-    $inatividade = 1800; // 30 minutos (em segundos)
+    $inatividade = 1800; // 30 minutos
 
     if (isset($_SESSION['ultima_atividade']) && (time() - $_SESSION['ultima_atividade']) > $inatividade) {
         session_unset();
@@ -39,7 +39,7 @@
                 <a class="nav-link" href="#">HYpe</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">HYpe</a>
+                <a class="nav-link" href="logout.php">sair</a>
             </li>
         </ul>
     </header>

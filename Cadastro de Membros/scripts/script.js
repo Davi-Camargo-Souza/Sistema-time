@@ -30,12 +30,40 @@ function mostrarSenha(){
 }
 
 function mudarOpcoes(funcao) {
-    var categorias = document.getElementById('categorias');
+    var divCaixaSelecaoCamisas = document.getElementById('selecaoNumeros');
+    divCaixaSelecaoCamisas.innerHTML = '';
 
+    var categorias = document.getElementById('categorias');
     if (funcao == "jogador") {
-        categorias.innerHTML = "<option selected>Escolha a categoria</option> <option value='Goleiro'>Goleiro</option> <option value='Zagueiro'>Zagueiro</option> <option value='Lateral'>Lateral</option> <option value='Meia'>Meia</option> <option value='Atacante'>Atacante</option>";
+        categorias.innerHTML = "<option selected>Escolha a categoria</option> <option value='1'>Goleiro</option> <option value='2'>Zagueiro</option> <option value='3'>Lateral</option> <option value='4'>Meia</option> <option value='5'>Atacante</option>";
     };
     if (funcao == "tecnico") {
-        categorias.innerHTML = "<option selected>Escolha a categoria</option> <option value='Treinador'>Treinador</option> <option value='Auxiliar Tecnico'>Auxiliar técnico</option> <option value='Preparador fisico'>Preparador físico</option> <option value='Fisioterapeuta'>Fisioterapeuta</option>";
+        categorias.innerHTML = "<option selected>Escolha a categoria</option> <option value='6'>Treinador</option> <option value='7'>Auxiliar técnico</option> <option value='8'>Preparador físico</option> <option value='9'>Fisioterapeuta</option>";
     };
+}
+
+function selecionarCamisa(){
+    var opcaoSelecionada = document.getElementById('categorias').value;
+    var div = document.getElementById('selecaoNumeros');
+    div.innerHTML = '';
+
+    if (opcaoSelecionada == '3'){
+        div.class = "mb-3";
+        div.innerHTML = "<div class='mb-3'> <label for='numero'>Número da camisa</label> <select id='numeros' class='custom-select' name='numero'> <option selected>Escolha a camisa</option> <option value='2'>2</option> <option value='3'>3</option> </select> </div>";
+    }
+
+    if (opcaoSelecionada == '2'){
+        div.class = "mb-3";
+        div.innerHTML = "<div class='mb-3'> <label for='numero'>Número da camisa</label> <select id='numeros' class='custom-select' name='numero'> <option selected>Escolha a camisa</option> <option value='4'>4</option> <option value='5'>5</option> </select> </div>";
+    }
+
+    if (opcaoSelecionada == '4'){
+        div.class = "mb-3";
+        div.innerHTML = "<div class='mb-3'> <label for='numero'>Número da camisa</label> <select id='numeros' class='custom-select' name='numero'> <option selected>Escolha a camisa</option> <option value='6'>6</option> <option value='8'>8</option> </select> </div>";
+    }
+
+    if (opcaoSelecionada == '5'){
+        div.class = "mb-3";
+        div.innerHTML = "<div class='mb-3'> <label for='numero'>Número da camisa</label> <select id='numeros' class='custom-select' name='numero'> <option selected>Escolha a camisa</option> <option value='9'>9</option> <option value='10'>10</option> </select> </div>";
+    }
 }
