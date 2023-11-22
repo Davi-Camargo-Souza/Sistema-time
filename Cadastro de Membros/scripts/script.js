@@ -28,3 +28,14 @@ function mostrarSenha(){
         };
     };
 }
+
+function mudarOpcoes(funcao) {
+    var categorias = document.getElementById('categorias');
+
+    if (funcao == "jogador") {
+        categorias.innerHTML = "<option selected>Escolha a categoria</option> <option value='Goleiro'>Goleiro</option> <option value='Zagueiro'>Zagueiro</option> <option value='Lateral'>Lateral</option> <option value='Meia'>Meia</option> <option value='Atacante'>Atacante</option>";
+    };
+    if (funcao == "tecnico") {
+        categorias.innerHTML = "<option selected>Escolha a categoria</option> <option value='Treinador'>Treinador</option> <option value='Auxiliar Tecnico'>Auxiliar técnico</option> <option value='Preparador fisico'>Preparador físico</option> <option value='Fisioterapeuta'>Fisioterapeuta</option>";
+    };
+}

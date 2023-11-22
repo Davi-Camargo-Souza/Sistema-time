@@ -18,17 +18,17 @@
                             <h2>Cadastre-se!</h2>
                         </div>
                         <div class="card-body">
-                            <form action="cadastrar.php" method="POST">
+                            <form action="cadastrarUsuario.php" method="POST">
                                 <div>
                                     <div class="mb-3">
                                         <label for="Name">Nome</label>
-                                        <input id="usuario" type="text" name="nome" class="form-control" title="Insira seu nome." required>
+                                        <input id="nome" type="text" name="nome" class="form-control" title="Insira seu nome." required>
                                     </div>
                                 </div>
                                 <div>
                                     <div class="mb-3">
                                         <label for="User">Email</label>
-                                        <input id="usuario" type="email" name="email" class="form-control" title="Insira seu E-mail." required>
+                                        <input id="user" type="email" name="email" class="form-control" title="Insira seu E-mail." required>
                                     </div>
                                 </div>
                                 <div>
@@ -44,7 +44,7 @@
                                 <div>
                                     <div class="mb-3">
                                         <label for="Birthday">Data de Nascimento</label>
-                                        <input id="senha" type="date" name="date" class="form-control" title="Insira a data do seu nascimento." required>
+                                        <input id="dtaNasc" type="date" name="date" class="form-control" title="Insira a data do seu nascimento." required>
                                     </div>
                                 </div>
                                 <div>

@@ -35,7 +35,7 @@
                                 <div>
                                     <div class="mb-3">
                                         <button id="botaoEnviar" type="submit" class="btn btn-danger">Enviar</button>
-                                        <a href="cadastro.php" class="btn btn-danger">Cadastrar-se</a>
+                                        <a href="cadastroUsuario.php" class="btn btn-danger">Cadastrar-se</a>
                                     </div>
                                 </div>
                             </form>
