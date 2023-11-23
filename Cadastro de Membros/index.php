@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 </head>
 <body class="corpo">
-    <div class="login">
+    <div class="centralizar">
         <div class="conteiner">
             <div class="row">
                 <div class="col-lg-4 offset-lg-4">
@@ -25,11 +25,16 @@
                                         <input id="usuario" type="email" name="usuario" class="form-control" title="Insira seu E-mail." required>
                                     </div>
                                 </div>
-                                <div>
-                                    <div class="mb-3">
-                                        <label for="Password">Senha</label>
-                                        <input id="senha" type="password" name="senha" class="form-control mb-3" title="Insira sua senha." required>
-                                        <button id="verSenhaButton" type="button" class="btn mb-3" onclick="mostrarSenha()"><i class="fa-solid fa-eye"></i></button>
+                                <div class="conteiner">
+                                    <div class="mb-3 row">
+                                        <div class="col-sm-8">
+                                            <label for="Password">Senha</label>
+                                            <input id="senha" type="password" name="senha" class="form-control mb-3" title="Insira sua senha." required>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <br>
+                                            <button id="verSenhaButton" type="button" class="btn mt-md-2" onclick="mostrarSenha()"><i class="fa-solid fa-eye"></i></button>                                           
+                                        </div>
                                     </div>
                                 </div>
                                 <div>

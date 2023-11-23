@@ -30,21 +30,12 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 </head>
 <body class="corpo">
-    <header>
-        <ul class="nav nav-fill bg-light">
-            <li class="nav-item">
-                <a class="nav-link" href="cadastroMembros.php">Cadastrar Membros</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">HYpe</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="logout.php">sair</a>
-            </li>
-        </ul>
-    </header>
     <main>
-        <div class="login">
+        <div>
+            <button id="voltar-btn" class="btn btn-danger" onclick="voltarPagina()"><i class="fa-solid fa-arrow-left"></i></button>
+            <button id="sair-btn" class="btn btn-danger" onclick="sair()"><i class="fa-solid fa-right-to-bracket"></i></button>
+        </div>
+        <div class="centralizar">
             <div class="conteiner">
                 <div class="row">
                     <div class="col-lg-4 offset-lg-4">

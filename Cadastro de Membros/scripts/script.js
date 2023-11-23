@@ -67,3 +67,11 @@ function selecionarCamisa(){
         div.innerHTML = "<div class='mb-3'> <label for='numero'>Número da camisa</label> <select id='numeros' class='custom-select' name='numero'> <option selected>Escolha a camisa</option> <option value='9'>9</option> <option value='10'>10</option> </select> </div>";
     }
 }
+
+function voltarPagina() {
+    window.history.back();
+}
+
+function sair() {
+    location.href="logout.php"
+}

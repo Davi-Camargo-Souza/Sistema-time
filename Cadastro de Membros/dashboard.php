@@ -30,21 +30,27 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 </head>
 <body class="corpo">
-    <header>
-        <ul class="nav nav-fill bg-light">
-            <li class="nav-item">
-                <a class="nav-link" href="cadastroMembros.php">Cadastrar Membros</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">HYpe</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="logout.php">sair</a>
-            </li>
-        </ul>
-    </header>
-    <main>
-
+    <main class="centralizar">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card border-primary">
+                    <div class="card-body">
+                        <h5 class="card-title"><a href="cadastroMembros.php">Cadastrar Membros</a></h5>
+                        <p class="card-text">Insira os dados e selecione a função do membro do time.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card border-primary">
+                    <div class="card-body">
+                        <h5 class="card-title"><a href="gerenciarMembros.php">Gerenciar Membros</a></h5>
+                        <p class="card-text">Veja todos os membros cadastrados, e altere seus dados.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     </main>
     <script src="https://kit.fontawesome.com/6f3da5c6b0.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
