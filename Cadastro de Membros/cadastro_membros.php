@@ -47,7 +47,7 @@
                                 <form action="cadastro_membros_exe.php" method="POST">
                                     <div>
                                         <div class="mb-3">
-                                            <label for="Nome Completo">Nome Completo</label>
+                                            <label for="nome">Nome Completo</label>
                                             <input id="nome" type="text" name="nome" class="form-control" pattern="[a-zA-Z\u00C0-\u00FF ]{10,100}$" title="Nome entre 10 e 100 letras." required>
                                         </div>
                                     </div>
@@ -59,13 +59,13 @@
                                     </div>
                                     <div>
                                         <div class="mb-3">
-                                            <label for="Birthday">Data de Nascimento</label>
+                                            <label for="dtaNasc">Data de Nascimento</label>
                                             <input id="dtaNasc" type="date" name="date" class="form-control" title="Data de nascimento do membro." required>
                                         </div>
                                     </div>
                                     <div>
                                         <div class="mb-3">
-                                            <label for="funcao">Função</label>
+                                            <label>Função</label>
                                             <br>
                                             <input id="jogadorRadio" onclick="mudarOpcoes('jogador','cadastro')" type="radio" name="funcao" value="Jogador" id="jogador">Jogador
                                             <input id="tecnicoRadio" onclick="mudarOpcoes('tecnico','cadastro')" type="radio" name="funcao" value="Tecnico" id="tecnico">Técnico
@@ -73,7 +73,7 @@
                                     </div>
                                     <div>
                                         <div class="mb-3">
-                                            <label for="categoria">Categoria</label>
+                                            <label for="categorias">Categoria</label>
                                             <select id="categorias" class="custom-select" name="categoria" onchange="selecionarCamisa()">
                                             </select>
                                         </div>
