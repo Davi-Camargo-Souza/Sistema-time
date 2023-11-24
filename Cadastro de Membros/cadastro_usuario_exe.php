@@ -3,7 +3,7 @@
 
     $regex = '/^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[!@#$%^&*()_+])[A-Za-z\d!@#$%^&*()_+]{8,}$/';
     if (!preg_match($regex, $_POST["senha"])){
-        header("Location: cadastroUsuario.php?error=invalid_password");
+        header("Location: cadastro_usuario.php?error=invalid_password");
         exit();
     };
 
@@ -36,4 +36,4 @@
     } finally {
         $conn->close();
     };
-    print "<script>location.href='cadastroUsuario.php'</script>";
+    print "<script>location.href='cadastro_usuario.php'</script>";

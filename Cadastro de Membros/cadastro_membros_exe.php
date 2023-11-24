@@ -5,18 +5,18 @@
 
     if (strlen($documento) < 11) {
         print "<script>alert('Por favor, digite um CPF com 11 digítos.')</script>";
-        print "<script>location.href='cadastromembros.php'</script>";
+        print "<script>location.href='cadastro_membros.php'</script>";
         exit();
     }
 
-    $sql = "SELECT 1 FROM cadastromembros.membros
+    $sql = "SELECT 1 FROM membros
             WHERE cpf = '{$documento}'";
 
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
         print "<script>alert('CPF já cadastrado como um jogador.')</script>";
-        print "<script>location.href='cadastromembros.php'</script>";
+        print "<script>location.href='cadastro_membros.php'</script>";
         exit();
     }
 
@@ -25,7 +25,7 @@
     $categoria = $_POST["categoria"];
     $data = date("Y-m-d");
 
-    $sql = "INSERT INTO cadastromembros.membros
+    $sql = "INSERT INTO membros
             (nome, cpf, dtaNasc, codFuncao)
             VALUES ('{$nome}', '{$documento}',
             '{$dtaNasc}','{$categoria}')";
@@ -39,10 +39,10 @@
         } else {
             $numero = $_POST["numero"];
         }
-        $sql = "INSERT INTO cadastromembros.cadastro_jogadores
+        $sql = "INSERT INTO cadastro_jogadores
             (codMembro, numero, dtaCadastro) VALUES ('{$codMembro}','{$numero}', '{$data}')";
     } else if ($funcao == "Tecnico"){
-        $sql = "INSERT INTO cadastromembros.cadastro_comissao_tecnica
+        $sql = "INSERT INTO cadastro_comissao_tecnica
                 (codMembro, dtaCadastro) VALUES ('{$codMembro}','{$data}')";
     };
 
@@ -52,4 +52,4 @@
     }
 
     $conn->close();
-    print "<script>location.href='cadastroMembros.php'</script>";
+    print "<script>location.href='cadastro_membros.php'</script>";

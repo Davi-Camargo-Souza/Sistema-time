@@ -40,7 +40,7 @@
                 <?php
                     include("config.php");
                     $temMembros = False;
-                    $sql = "SELECT * FROM cadastromembros.membros";
+                    $sql = "SELECT * FROM membros";
                     $result = $conn->query($sql);
 
                     echo "<div class='card mb-3'>
@@ -50,16 +50,16 @@
                         echo "<h2 class='mt-2' style='text-align: center'>Não há membros cadastrados.</h2>";
                     } else {
                         $temMembros = True;
-                        $sql = "SELECT idMembro, nome, cadastromembros.funcoes.nomeFuncao, 
-                                cpf, dtaNasc, cadastromembros.cadastro_jogadores.numero, 
-                                cadastromembros.cadastro_jogadores.idJogador 
-                                FROM cadastromembros.membros
-                                INNER JOIN cadastromembros.funcoes ON
-                                cadastromembros.membros.codFuncao = 
-                                cadastromembros.funcoes.idFuncao
-                                INNER JOIN cadastromembros.cadastro_jogadores ON
-                                cadastromembros.membros.idMembro = 
-                                cadastromembros.cadastro_jogadores.codMembro
+                        $sql = "SELECT idMembro, nome, funcoes.nomeFuncao, 
+                                cpf, dtaNasc, cadastro_jogadores.numero, 
+                                cadastro_jogadores.idJogador 
+                                FROM membros
+                                INNER JOIN funcoes ON
+                                membros.codFuncao = 
+                                funcoes.idFuncao
+                                INNER JOIN cadastro_jogadores ON
+                                membros.idMembro = 
+                                cadastro_jogadores.codMembro
                                 ORDER BY idMembro ASC";
 
                         $result = $conn->query($sql);
@@ -87,8 +87,8 @@
                                 $cpf = $row["cpf"];
                                 $dtaNasc = $row["dtaNasc"];
                                 $numero = $row["numero"];
-                                $linkExclusao = "excluirMembros.php?idjogador=".urlencode($idJogador);
-                                $linkAtualizacao = "atualizarMembros.php?idjogador=".urlencode($idJogador);
+                                $linkExclusao = "excluir_membros.php?idjogador=".urlencode($idJogador);
+                                $linkAtualizacao = "atualizar_membros.php?idjogador=".urlencode($idJogador);
                                 
                                 echo "<div class='row' style='text-align: center'>
                                         <div class='col'>$idMembro</div>
@@ -109,15 +109,15 @@
                     echo "</div>
                         </div>";
                     
-                    $sql = "SELECT idMembro, nome, cadastromembros.funcoes.nomeFuncao, 
-                            cpf, dtaNasc, cadastromembros.cadastro_comissao_tecnica.idTecnico
-                            FROM cadastromembros.membros
-                            INNER JOIN cadastromembros.funcoes ON
-                            cadastromembros.membros.codFuncao = 
-                            cadastromembros.funcoes.idFuncao
-                            INNER JOIN cadastromembros.cadastro_comissao_tecnica ON
-                            cadastromembros.membros.idMembro = 
-                            cadastromembros.cadastro_comissao_tecnica.codMembro
+                    $sql = "SELECT idMembro, nome, funcoes.nomeFuncao, 
+                            cpf, dtaNasc, cadastro_comissao_tecnica.idTecnico
+                            FROM membros
+                            INNER JOIN funcoes ON
+                            membros.codFuncao = 
+                            funcoes.idFuncao
+                            INNER JOIN cadastro_comissao_tecnica ON
+                            membros.idMembro = 
+                            cadastro_comissao_tecnica.codMembro
                             ORDER BY idMembro ASC";
 
                     $result = $conn->query($sql);
@@ -153,8 +153,8 @@
                                     $funcao = $row["nomeFuncao"];
                                     $cpf = $row["cpf"];
                                     $dtaNasc = $row["dtaNasc"];
-                                    $linkExclusao = "excluirMembros.php?idtecnico=".urlencode($idTecnico);
-                                    $linkAtualizacao = "atualizarMembros.php?idtecnico=".urlencode($idTecnico);
+                                    $linkExclusao = "excluir_membros.php?idtecnico=".urlencode($idTecnico);
+                                    $linkAtualizacao = "atualizar_membros.php?idtecnico=".urlencode($idTecnico);
 
                                     echo "<div class='row' style='text-align: center'>
                                             <div class='col'>$idMembro</div>

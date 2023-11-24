@@ -2,7 +2,7 @@
     $servername = "localhost";
     $username = "root";
     $password = "";
-    $base = "cadastroMembros";
+    $base = "cadastromembros";
 
     try {
         $conn = mysqli_connect($servername, $username, $password);
@@ -19,7 +19,7 @@
 
     if ($result === TRUE) {
         $conn = new mysqli($servername, $username, $password, $base);
-        $sql = "CREATE TABLE IF NOT EXISTS cadastromembros.usuarios (
+        $sql = "CREATE TABLE IF NOT EXISTS usuarios (
                 id INT PRIMARY KEY AUTO_INCREMENT,
                 nome VARCHAR(255) NOT NULL,
                 email VARCHAR(255) NOT NULL UNIQUE,
@@ -35,26 +35,26 @@
         print "<script>alert('Erro ao criar o banco de dados.')</script>";
     };
 
-    $sql = "CREATE TABLE IF NOT EXISTS cadastromembros.funcoes (
+    $sql = "CREATE TABLE IF NOT EXISTS funcoes (
             idFuncao INT PRIMARY KEY NOT NULL,
             nomeFuncao VARCHAR(255) NOT NULL UNIQUE);";
     
     $conn->query($sql);
 
-    $sql = "SELECT 1 FROM cadastromembros.funcoes
+    $sql = "SELECT 1 FROM funcoes
             WHERE idFuncao = 1";
 
     $result = $conn->query($sql);
 
     if ($result->num_rows == 0) {
-        $sql = "INSERT INTO cadastromembros.funcoes (idFuncao, nomeFuncao)
+        $sql = "INSERT INTO funcoes (idFuncao, nomeFuncao)
         VALUES (1, 'Goleiro'), (2,'Zagueiro'), (3,'Lateral'), (4,'Meia'), (5,'Atacante'),
         (6,'Treinador'),(7,'Auxiliar Tecnico'),(8,'Preparador Fisico'), (9,'Fisioterapeuta');";
 
         $conn->query($sql);
     }
    
-    $sql = "CREATE TABLE IF NOT EXISTS cadastromembros.membros (
+    $sql = "CREATE TABLE IF NOT EXISTS membros (
             idMembro INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
             codFuncao INT NOT NULL,
             nome VARCHAR(255) NOT NULL,
@@ -64,7 +64,7 @@
     
     $conn->query($sql);
 
-    $sql = "CREATE TABLE IF NOT EXISTS cadastromembros.cadastro_jogadores (
+    $sql = "CREATE TABLE IF NOT EXISTS cadastro_jogadores (
             idJogador INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
             codMembro INT NOT NULL,
             numero INT NOT NULL,
@@ -73,7 +73,7 @@
         
     $conn->query($sql);
     
-    $sql = "CREATE TABLE IF NOT EXISTS cadastromembros.cadastro_comissao_tecnica (
+    $sql = "CREATE TABLE IF NOT EXISTS cadastro_comissao_tecnica (
             idTecnico INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
             codMembro INT NOT NULL,
             dtaCadastro DATE NOT NULL,

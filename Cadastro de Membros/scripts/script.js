@@ -95,7 +95,7 @@ function selecionarCamisa(tela, numero, idFuncao){
 
 function voltarPagina(tela) {
     if (tela == 'atualizar') {
-        location.href='gerenciarMembros.php';
+        location.href='gerenciar_membros.php';
     } else {
         location.href='dashboard.php';
     }

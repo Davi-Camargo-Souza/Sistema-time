@@ -21,14 +21,14 @@
                             <form action="login.php" method="POST">
                                 <div>
                                     <div class="mb-3">
-                                        <label for="User">Usuário</label>
+                                        <label for="usuario">Usuário</label>
                                         <input id="usuario" type="email" name="usuario" class="form-control" title="Insira seu E-mail." required>
                                     </div>
                                 </div>
                                 <div class="conteiner">
                                     <div class="mb-3 row">
                                         <div class="col-sm-8">
-                                            <label for="Password">Senha</label>
+                                            <label for="senha">Senha</label>
                                             <input id="senha" type="password" name="senha" class="form-control mb-3" title="Insira sua senha." required>
                                         </div>
                                         <div class="col-sm-4">
@@ -40,7 +40,7 @@
                                 <div>
                                     <div class="mb-3">
                                         <button id="botaoEnviar" type="submit" class="btn btn-danger">Enviar</button>
-                                        <a href="cadastroUsuario.php" class="btn btn-danger">Cadastrar-se</a>
+                                        <a href="cadastro_usuario.php" class="btn btn-danger">Cadastrar-se</a>
                                     </div>
                                 </div>
                             </form>

@@ -11,37 +11,37 @@
         $coluna = "idJogador";
     }
 
-    $sql = "SELECT codMembro FROM cadastromembros.$tabela
-            WHERE '{$id}' = cadastromembros.$tabela.$coluna";
+    $sql = "SELECT codMembro FROM $tabela
+            WHERE '{$id}' = $tabela.$coluna";
     
     $result = $conn->query($sql);
     $row = $result->fetch_assoc();
     $idMembro = $row["codMembro"];
 
-    $sql = "DELETE FROM cadastromembros.$tabela
-            WHERE '{$id}' = cadastromembros.$tabela.$coluna";
+    $sql = "DELETE FROM $tabela
+            WHERE '{$id}' = $tabela.$coluna";
     
     $result = $conn->query($sql);
 
     if ($result) {
-        $sql = "DELETE FROM cadastromembros.membros
+        $sql = "DELETE FROM membros
                 WHERE '{$idMembro}' = idMembro";
         $result = $conn->query($sql);
 
         if ($result) {
             print "<script>alert('Exclusão bem sucedida.')</script>";
-            print "<script>location.href='gerenciarMembros.php'</script>";
+            print "<script>location.href='gerenciar_membros.php'</script>";
             $conn->close();
             exit();
         } else {
             print "<script>alert('Não foi possível excluir, tente novamente.')</script>";
-            print "<script>location.href='gerenciarMembros.php'</script>";
+            print "<script>location.href='gerenciar_membros.php'</script>";
             $conn->close();
             exit();
         }
     } else {
         print "<script>alert('Não foi possível excluir, tente novamente.')</script>";
-        print "<script>location.href='gerenciarMembros.php'</script>";
+        print "<script>location.href='gerenciar_membros.php'</script>";
         $conn->close();
         exit();
     }

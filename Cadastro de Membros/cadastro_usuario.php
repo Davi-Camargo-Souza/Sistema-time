@@ -18,22 +18,22 @@
                             <h2>Cadastre-se!</h2>
                         </div>
                         <div class="card-body">
-                            <form action="cadastrarUsuario.php" method="POST">
+                            <form action="cadastro_usuario_exe.php" method="POST">
                                 <div>
                                     <div class="mb-3">
-                                        <label for="Name">Nome</label>
+                                        <label for="nome">Nome</label>
                                         <input id="nome" type="text" name="nome" class="form-control" title="Insira seu nome." required>
                                     </div>
                                 </div>
                                 <div>
                                     <div class="mb-3">
-                                        <label for="User">Email</label>
-                                        <input id="user" type="email" name="email" class="form-control" title="Insira seu E-mail." required>
+                                        <label for="user">Email</label>
+                                        <input id="user" type="email" name="email" class="form-control" title="Insira seu E-mail." autocomplete="on" required>
                                     </div>
                                 </div>
                                 <div>
                                     <div class="mb-3">
-                                        <label for="Password">Senha</label>
+                                        <label for="senha">Senha</label>
                                         <input id="senha" type="password" name="senha" class="form-control mb-3" onkeyup="validarSenha()" required>
                                         <button id="verSenhaButton" type="button" class="btn mb-3" onclick="mostrarSenha()"><i class="fa-solid fa-eye"></i></button>
                                         <div class="bg-danger rounded sm">
@@ -43,7 +43,7 @@
                                 </div>
                                 <div>
                                     <div class="mb-3">
-                                        <label for="Birthday">Data de Nascimento</label>
+                                        <label for="dtaNasc">Data de Nascimento</label>
                                         <input id="dtaNasc" type="date" name="date" class="form-control" title="Insira a data do seu nascimento." required>
                                     </div>
                                 </div>

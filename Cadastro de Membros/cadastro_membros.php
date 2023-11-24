@@ -44,7 +44,7 @@
                                 <h2>Tela de cadastros</h2>
                             </div>
                             <div class="card-body">
-                                <form action="cadastrarMembro.php" method="POST">
+                                <form action="cadastro_membros_exe.php" method="POST">
                                     <div>
                                         <div class="mb-3">
                                             <label for="Nome Completo">Nome Completo</label>

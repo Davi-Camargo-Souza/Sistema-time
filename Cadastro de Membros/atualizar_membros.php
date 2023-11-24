@@ -94,7 +94,7 @@
                                 <h2>Atualizar cadastros</h2>
                             </div>
                             <div class="card-body">
-                                <form action="atualizarMembros_exe.php" method="POST">
+                                <form action="atualizar_membros_exe.php" method="POST">
                                     <input type="hidden" name="idMembro" value="<?php echo $idMembro; ?>">
                                     <div>
                                         <div class="mb-3">
@@ -105,7 +105,7 @@
                                     <div>
                                         <div class="mb-3">
                                             <label for="cpf">CPF</label>
-                                            <input id="cpf" type="text" name="documento" class="form-control mb-3" title="CPF do membro." maxlength="11" value="<?php echo $cpf ?>" required>
+                                            <input id="cpf" type="text" name="documento" class="form-control mb-3" title="CPF do membro." minlength="11" maxlength="11" value="<?php echo $cpf ?>" required>
                                         </div>
                                     </div>
                                     <div>

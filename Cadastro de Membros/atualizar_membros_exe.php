@@ -41,7 +41,7 @@
             echo "<script>alert('Não foi possível atualizar o cadastro.')</script>";
         }
     };
-    echo "<script>location.href='gerenciarMembros.php'</script>";
+    echo "<script>location.href='gerenciar_membros.php'</script>";
     $conn->close();
 
    
