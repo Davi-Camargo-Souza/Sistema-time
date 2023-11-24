@@ -52,4 +52,4 @@
     }
 
     $conn->close();
-    print "<script>location.href='cadastromembros.php'</script>";
+    print "<script>location.href='cadastroMembros.php'</script>";
