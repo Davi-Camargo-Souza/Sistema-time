@@ -1,11 +1,12 @@
 <?php 
     include("config.php");
-    $nome = $_POST["nome"];
     $documento = $_POST["documento"];
-    $dtaNasc = $_POST["date"];
-    $funcao = $_POST["funcao"];
-    $categoria = $_POST["categoria"];
-    $data = date("Y-m-d");
+
+    if (strlen($documento) < 11) {
+        print "<script>alert('Por favor, digite um CPF com 11 digítos.')</script>";
+        print "<script>location.href='cadastromembros.php'</script>";
+        exit();
+    }
 
     $sql = "SELECT 1 FROM cadastromembros.membros
             WHERE cpf = '{$documento}'";
@@ -17,6 +18,12 @@
         print "<script>location.href='cadastromembros.php'</script>";
         exit();
     }
+
+    $nome = $_POST["nome"];
+    $dtaNasc = $_POST["date"];
+    $funcao = $_POST["funcao"];
+    $categoria = $_POST["categoria"];
+    $data = date("Y-m-d");
 
     $sql = "INSERT INTO cadastromembros.membros
             (nome, cpf, dtaNasc, codFuncao)

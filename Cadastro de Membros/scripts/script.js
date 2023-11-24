@@ -69,7 +69,7 @@ function selecionarCamisa(){
 }
 
 function voltarPagina() {
-    window.history.back();
+    location.href="dashboard.php"
 }
 
 function sair() {

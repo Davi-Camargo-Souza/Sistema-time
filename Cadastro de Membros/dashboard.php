@@ -34,7 +34,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6">
-                <div class="card border-primary">
+                <div class="card border-primary mb-3">
                     <div class="card-body">
                         <h5 class="card-title"><a href="cadastroMembros.php">Cadastrar Membros</a></h5>
                         <p class="card-text">Insira os dados e selecione a função do membro do time.</p>
@@ -42,7 +42,7 @@
                 </div>
             </div>
             <div class="col-md-6">
-                <div class="card border-primary">
+                <div class="card border-primary mb-3">
                     <div class="card-body">
                         <h5 class="card-title"><a href="gerenciarMembros.php">Gerenciar Membros</a></h5>
                         <p class="card-text">Veja todos os membros cadastrados, e altere seus dados.</p>
