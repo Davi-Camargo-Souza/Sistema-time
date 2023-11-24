@@ -39,6 +39,7 @@
             <div class="conteiner">
                 <?php
                     include("config.php");
+                    $temMembros = False;
                     $sql = "SELECT * FROM cadastromembros.membros";
                     $result = $conn->query($sql);
 
@@ -74,6 +75,8 @@
                                         <div class='col'><strong>Camisa</strong></div>
                                         <div class='col'><strong>CPF</strong></div>
                                         <div class='col'><strong>Nascimento</strong></div>
+                                        <div class='col'><strong>Editar</strong></div>
+                                        <div class='col'><strong>Excluir</strong></div>
                                     </div>";
                             echo "<div class='mb-3'>";
                             while ($row = $result->fetch_assoc()) {
@@ -93,6 +96,14 @@
                                         <div class='col'>$numero</div>
                                         <div class='col'>$cpf</div>
                                         <div class='col'>$dtaNasc</div>
+                                        <div class='col'><form action='excluirMembros.php' method='post'>
+                                        <input type='hidden' name='idjogador' value='$idJogador'>
+                                        <button type='submit' class='btn btn-danger'><i class='fa-solid fa-pen-to-square'></i></button>
+                                        </form></div>
+                                        <div class='col'><form action='excluirMembros.php' method='post'>
+                                        <input type='hidden' name='idjogador' value='$idJogador'>
+                                        <button type='submit' class='btn btn-danger'><i class='fa-solid fa-trash'></i></button>
+                                        </form></div>
                                     </div>";
                             }
                             echo "</div>";
@@ -157,9 +168,9 @@
                                             <button type='submit' class='btn btn-danger'><i class='fa-solid fa-pen-to-square'></i></button>
                                             </form></div>
                                             <div class='col'><form action='excluirMembros.php' method='post'>
-                                            <input type='hidden' name='id' value='$idTecnico'>
+                                            <input type='hidden' name='idtecnico' value='$idTecnico'>
                                             <button type='submit' class='btn btn-danger'><i class='fa-solid fa-trash'></i></button>
-                                        </form></div>
+                                            </form></div>
                                         </div>";
                                 }
                                 echo "</div>";
