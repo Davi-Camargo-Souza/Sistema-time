@@ -1,6 +1,7 @@
 <?php 
     include("config.php");
     $documento = $_POST["documento"];
+    $nome = $_POST["nome"];
 
     if (strlen($documento) < 11) {
         print "<script>alert('Por favor, digite um CPF com 11 digítos.')</script>";
@@ -19,7 +20,6 @@
         exit();
     }
 
-    $nome = $_POST["nome"];
     $dtaNasc = $_POST["date"];
     $funcao = $_POST["funcao"];
     $categoria = $_POST["categoria"];

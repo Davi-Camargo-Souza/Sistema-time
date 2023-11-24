@@ -87,6 +87,8 @@
                                 $cpf = $row["cpf"];
                                 $dtaNasc = $row["dtaNasc"];
                                 $numero = $row["numero"];
+                                $linkExclusao = "excluirMembros.php?idjogador=".urlencode($idJogador);
+                                $linkAtualizacao = "atualizarMembros.php?idjogador=".urlencode($idJogador);
                                 
                                 echo "<div class='row' style='text-align: center'>
                                         <div class='col'>$idMembro</div>
@@ -96,14 +98,9 @@
                                         <div class='col'>$numero</div>
                                         <div class='col'>$cpf</div>
                                         <div class='col'>$dtaNasc</div>
-                                        <div class='col'><form action='excluirMembros.php' method='post'>
-                                        <input type='hidden' name='idjogador' value='$idJogador'>
-                                        <button type='submit' class='btn btn-danger'><i class='fa-solid fa-pen-to-square'></i></button>
-                                        </form></div>
-                                        <div class='col'><form action='excluirMembros.php' method='post'>
-                                        <input type='hidden' name='idjogador' value='$idJogador'>
-                                        <button type='submit' class='btn btn-danger'><i class='fa-solid fa-trash'></i></button>
-                                        </form></div>
+                                        <div class='col'><a href='$linkAtualizacao'>
+                                        <button type='submit' class='btn btn-danger'><i class='fa-solid fa-pen-to-square'></i></button></a></div>
+                                        <div class='col'><button class='btn btn-danger' onclick='exibirAlertaDeConfirmacao(\"$linkExclusao\")'><i class='fa-solid fa-trash'></i></button></div>
                                     </div>";
                             }
                             echo "</div>";
@@ -147,7 +144,8 @@
                                         <div class='col'><strong>Editar</strong></div>
                                         <div class='col'><strong>Excluir</strong></div>
                                     </div>";
-                                echo "<div class='mb-3'>";
+                                echo "<div class='mb-3'>
+                                        <div class='mb-3'>";
                                 while ($row = $result->fetch_assoc()) {
                                     $idMembro = $row["idMembro"];
                                     $idTecnico = $row["idTecnico"];
@@ -155,6 +153,8 @@
                                     $funcao = $row["nomeFuncao"];
                                     $cpf = $row["cpf"];
                                     $dtaNasc = $row["dtaNasc"];
+                                    $linkExclusao = "excluirMembros.php?idtecnico=".urlencode($idTecnico);
+                                    $linkAtualizacao = "atualizarMembros.php?idtecnico=".urlencode($idTecnico);
 
                                     echo "<div class='row' style='text-align: center'>
                                             <div class='col'>$idMembro</div>
@@ -163,17 +163,13 @@
                                             <div class='col'>$funcao</div>
                                             <div class='col'>$cpf</div>
                                             <div class='col'>$dtaNasc</div>
-                                            <div class='col'><form action='excluirMembros.php' method='post'>
-                                            <input type='hidden' name='id' value='$idTecnico'>
-                                            <button type='submit' class='btn btn-danger'><i class='fa-solid fa-pen-to-square'></i></button>
-                                            </form></div>
-                                            <div class='col'><form action='excluirMembros.php' method='post'>
-                                            <input type='hidden' name='idtecnico' value='$idTecnico'>
-                                            <button type='submit' class='btn btn-danger'><i class='fa-solid fa-trash'></i></button>
-                                            </form></div>
+                                            <div class='col'><a href='$linkAtualizacao'>
+                                            <button type='submit' class='btn btn-danger'><i class='fa-solid fa-pen-to-square'></i></button></a></div>
+                                            <div class='col'><button class='btn btn-danger' onclick='exibirAlertaDeConfirmacao(\"$linkExclusao\")'><i class='fa-solid fa-trash'></i></button></div>
                                         </div>";
                                 }
-                                echo "</div>";
+                                echo "</div>
+                                    </div>";
                         echo "</div>
                         </div>";
                     };
