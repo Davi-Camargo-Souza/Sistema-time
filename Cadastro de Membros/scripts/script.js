@@ -48,39 +48,48 @@ function definirCategoriaPadrao(categoria) {
     option.selected = true;
 };
 
-function definirNumeroCamisaPadrao(numero) {
-    var option = document.getElementById('option-padrao-numero');
+function definirNumeroCamisaPadrao(numero, idFuncao) {
+    var categoria = document.getElementById('categorias');
+    var selecionado = categoria.selectedIndex;
+    var categoriaSelecionada = categoria.options[selecionado].value;
 
-    option.innerHTML = numero;
-    option.value = numero;
+    if (categoriaSelecionada == idFuncao) {
+        var caixa = document.getElementById('numeros');
+        for (var i = 0; i < caixa.options.length; i++) {
+            if (caixa.options[i].value === numero) {
+                caixa.options[i].selected = true;
+                return;
+            }
+        }
+    }
 };
 
-function selecionarCamisa(tela, numero){
+function selecionarCamisa(tela, numero, idFuncao){
     var opcaoSelecionada = document.getElementById('categorias').value;
     var div = document.getElementById('selecaoNumeros');
     div.innerHTML = '';
 
     if (opcaoSelecionada == '3'){
         div.class = "mb-3";
-        div.innerHTML = "<div class='mb-3'> <label for='numero'>Número da camisa</label> <select id='numeros' class='custom-select' name='numero'> <option selected id='option-padrao-numero'>Escolha a camisa</option> <option value='2'>2</option> <option value='3'>3</option> </select> </div>";
+        div.innerHTML = "<div class='mb-3'> <label for='numeros'>Número da camisa</label> <select id='numeros' class='custom-select' name='numero'><option value='2'>2</option> <option value='3'>3</option> </select> </div>";
     }
 
     if (opcaoSelecionada == '2'){
         div.class = "mb-3";
-        div.innerHTML = "<div class='mb-3'> <label for='numero'>Número da camisa</label> <select id='numeros' class='custom-select' name='numero'> <option selected id='option-padrao-numero'>Escolha a camisa</option> <option value='4'>4</option> <option value='5'>5</option> </select> </div>";
+        div.innerHTML = "<div class='mb-3'> <label for='numeros'>Número da camisa</label> <select id='numeros' class='custom-select' name='numero'><option value='4'>4</option> <option value='5'>5</option> </select> </div>";
     }
 
     if (opcaoSelecionada == '4'){
         div.class = "mb-3";
-        div.innerHTML = "<div class='mb-3'> <label for='numero'>Número da camisa</label> <select id='numeros' class='custom-select' name='numero'> <option selected id='option-padrao-numero'>Escolha a camisa</option> <option value='6'>6</option> <option value='8'>8</option> </select> </div>";
+        div.innerHTML = "<div class='mb-3'> <label for='numeros'>Número da camisa</label> <select id='numeros' class='custom-select' name='numero'><option value='6'>6</option> <option value='8'>8</option> </select> </div>";
     }
 
     if (opcaoSelecionada == '5'){
         div.class = "mb-3";
-        div.innerHTML = "<div class='mb-3'> <label for='numero'>Número da camisa</label> <select id='numeros' class='custom-select' name='numero'> <option selected id='option-padrao-numero'>Escolha a camisa</option> <option value='9'>9</option> <option value='10'>10</option> </select> </div>";
+        div.innerHTML = "<div class='mb-3'> <label for='numeros'>Número da camisa</label> <select id='numeros' class='custom-select' name='numero'><option value='9'>9</option> <option value='10'>10</option> </select> </div>";
     }
     if (tela == 'atualizar' && opcaoSelecionada != '1') {
-        definirNumeroCamisaPadrao(numero)
+        definirNumeroCamisaPadrao(numero, idFuncao)
     }
 }
 

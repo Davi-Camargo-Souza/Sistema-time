@@ -52,7 +52,7 @@
     }
 
     $sql = "SELECT nome, cpf, dtaNasc, 
-            funcoes.nomeFuncao
+            funcoes.nomeFuncao, funcoes.idFuncao
             FROM membros
             INNER JOIN funcoes ON membros.codFuncao = 
             funcoes.idFuncao
@@ -64,6 +64,7 @@
     $cpf = $row["cpf"];
     $dtaNasc = $row["dtaNasc"];
     $nomefuncao = $row["nomeFuncao"];
+    $idFuncao = $row["idFuncao"];
     $conn->close();
 ?>
 
@@ -97,7 +98,7 @@
                                     <input type="hidden" name="idMembro" value="<?php echo $idMembro; ?>">
                                     <div>
                                         <div class="mb-3">
-                                            <label for="Nome Completo">Nome Completo</label>
+                                            <label for="nome">Nome Completo</label>
                                             <input id="nome" type="text" name="nome" class="form-control" pattern="[a-zA-Z\u00C0-\u00FF ]{10,100}$" title="Nome entre 10 e 100 letras." value="<?php echo $nome ?>" required>
                                         </div>
                                     </div>
@@ -109,15 +110,22 @@
                                     </div>
                                     <div>
                                         <div class="mb-3">
-                                            <label for="Birthday">Data de Nascimento</label>
+                                            <label for="dtaNasc">Data de Nascimento</label>
                                             <input id="dtaNasc" type="date" name="date" class="form-control" title="Data de nascimento do membro." value="<?php echo $dtaNasc ?>" required>
                                         </div>
                                     </div>
                                     <div>
                                         <div class="mb-3">
                                             <label for="categorias">Categoria</label>
-                                            <select id="categorias" class="custom-select" name="categoria" onchange="selecionarCamisa('atualizar','<?php echo $numero?>')">
-                                            </select>
+                                            <?php
+                                                if ($tipo == "jogador"){
+                                                    echo "<select id='categorias' class='custom-select' name='categoria' onchange='selecionarCamisa(\"atualizar\",\"$numero\",\"$idFuncao\")'>
+                                                    </select>";
+                                                } else if ($tipo == "tecnico"){
+                                                    echo "<select id='categorias' class='custom-select' name='categoria'>
+                                                    </select>";
+                                                }
+                                            ?>
                                         </div>
                                     </div>
                                     <div id="selecaoNumeros">

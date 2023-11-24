@@ -18,11 +18,9 @@
         exit();
     } else {
         if(isset($_POST["idjogador"])){
-            echo "<script>console.log('ta pegando o valor')</script>";
             $idJogador = $_POST["idjogador"];
             if (isset($_POST["numero"])){
                 $numero = $_POST["numero"];
-                echo "<script>console.log('$numero')</script>";
                 $sql = "UPDATE cadastro_jogadores SET numero = '{$numero}'
                         WHERE idJogador = '{$idJogador}'";
                 $result = $conn->query($sql);
