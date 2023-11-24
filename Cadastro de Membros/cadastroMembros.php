@@ -75,8 +75,6 @@
                                         <div class="mb-3">
                                             <label for="categoria">Categoria</label>
                                             <select id="categorias" class="custom-select" name="categoria" onchange="selecionarCamisa()">
-                                                <option selected>Escolha a categoria</option>
-                                                <option></option>
                                             </select>
                                         </div>
                                     </div>

@@ -115,10 +115,8 @@
                                     </div>
                                     <div>
                                         <div class="mb-3">
-                                            <label for="categoria">Categoria</label>
-                                            <select id="categorias" class="custom-select" name="categoria" onchange="selecionarCamisa('atualizar',<?php echo $numero?>)">
-                                                <option selected>Escolha a categoria</option>
-                                                <option></option>
+                                            <label for="categorias">Categoria</label>
+                                            <select id="categorias" class="custom-select" name="categoria" onchange="selecionarCamisa('atualizar','<?php echo $numero?>')">
                                             </select>
                                         </div>
                                     </div>
@@ -135,6 +133,7 @@
                                             echo "<script>mudarOpcoes('jogador','atualizar')</script>";
                                             echo "<script>definirCategoriaPadrao(\"$nomefuncao\")</script>";
                                         } else if ($tipo == "tecnico") {
+                                            echo "<script>mudarOpcoes('tecnico','atualizar')</script>";
                                             echo "<script>mudarOpcoes('tecnico','atualizar')</script>";
                                             echo "<script>definirCategoriaPadrao(\"$nomefuncao\")</script>";
                                         }

@@ -36,37 +36,16 @@ function mudarOpcoes(tipo, caminho) {
     }
     var categorias = document.getElementById('categorias');
     if (tipo == "jogador") {
-        categorias.innerHTML = "<option id='option-padrao-categoria' selected>Escolha a categoria</option> <option value='1'>Goleiro</option> <option value='2' id='Zagueiro'>Zagueiro</option> <option value='3'>Lateral</option> <option value='4'>Meia</option> <option value='5'>Atacante</option>";
+        categorias.innerHTML = "<option value='1' id='Goleiro'>Goleiro</option> <option value='2' id='Zagueiro'>Zagueiro</option> <option value='3' id='Lateral'>Lateral</option> <option value='4' id='Meia'>Meia</option> <option value='5' id='Atacante'>Atacante</option>";
     };
     if (tipo == "tecnico") {
-        categorias.innerHTML = "<option id='option-padrao-categoria' selected>Escolha a categoria</option> <option value='6'>Treinador</option> <option value='7'>Auxiliar técnico</option> <option value='8'>Preparador físico</option> <option value='9'>Fisioterapeuta</option>";
+        categorias.innerHTML = "<option value='6' id='Treinador'>Treinador</option> <option value='7' id='Auxiliar Tecnico'>Auxiliar técnico</option> <option value='8' id='Preparador Fisico'>Preparador físico</option> <option value='9' id='Fisioterapeuta'>Fisioterapeuta</option>";
     };
 };
 
 function definirCategoriaPadrao(categoria) {
-    var option = document.getElementById('option-padrao-categoria');
-    const categorias = {
-        'Goleiro': 1,
-        'Zagueiro': 2,
-        'Lateral': 3,
-        'Meia': 4,
-        'Atacante': 5,
-        'Treinador': 6,
-        'Auxiliar Tecnico': 7,
-        'Preparador Fisico': 8,
-        'Fisioterapeuta': 9
-    };
-
-    if (categorias.hasOwnProperty(categoria)) {
-        option.value = categorias[categoria];
-    } else {
-        console.error(`Categoria não mapeada: ${categoria}`);
-    }
-
-    option.innerHTML = categoria;
-
     var option = document.getElementById(categoria);
-    option.hidden = true;
+    option.selected = true;
 };
 
 function definirNumeroCamisaPadrao(numero) {
