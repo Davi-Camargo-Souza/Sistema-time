@@ -16,7 +16,7 @@
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
-        print "<script>alert('CPF já cadastrado como um jogador.')</script>";
+        print "<script>alert('CPF já cadastrado.')</script>";
         print "<script>location.href='cadastro_membros.php'</script>";
         exit();
     }
