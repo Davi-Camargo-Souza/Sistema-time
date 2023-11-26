@@ -1,4 +1,5 @@
 <?php 
+    include("tratamento_inatividade.php");
     include("config.php");
     $documento = $_POST["documento"];
     $nome = $_POST["nome"];

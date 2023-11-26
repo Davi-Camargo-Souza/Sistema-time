@@ -1,4 +1,5 @@
 <?php
+    include("tratamento_inatividade.php");
     include("config.php");
     if (isset($_GET["idtecnico"])) {
         $id = $_GET["idtecnico"];

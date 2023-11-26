@@ -1,4 +1,5 @@
 <?php
+    include("tratamento_inatividade.php");
     include("config.php");
     $idMembro = $_POST["idMembro"];
     $documento = $_POST["documento"];

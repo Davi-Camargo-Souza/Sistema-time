@@ -11,7 +11,7 @@
         }
     } catch (Exception $e) {
         print "<script>alert('Erro ao tentar se conectar ao banco de dados.')</script>";
-        print "<script>location.href='index.php'</script>";
+        print "<script>window.history.back()</script>";
     }
 
     $sql = "CREATE SCHEMA IF NOT EXISTS cadastromembros";

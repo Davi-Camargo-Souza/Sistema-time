@@ -1,6 +1,5 @@
 <?php
     session_start();
-
     $regex = '/^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[!@#$%^&*()_+])[A-Za-z\d!@#$%^&*()_+]{8,}$/';
     if (!preg_match($regex, $_POST["senha"])){
         header("Location: cadastro_usuario.php?error=invalid_password");
