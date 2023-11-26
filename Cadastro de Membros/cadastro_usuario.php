@@ -13,8 +13,8 @@
         <div class="conteiner">
             <div class="row">
                 <div class="col-lg-4 offset-lg-4">
-                    <div class="card border-danger">
-                        <div class="card-body">
+                    <div class="card" style="border-color: darkred">
+                        <div class="card-body" style="color: darkred">
                             <h2>Cadastre-se!</h2>
                         </div>
                         <div class="card-body">
@@ -49,8 +49,8 @@
                                 </div>
                                 <div>
                                     <div class="mb-3">
-                                        <button id="botaoEnviar" type="submit" class="btn btn-danger">Enviar</button>
-                                        <a href="index.php" class="btn btn-danger">Login</a>
+                                        <button id="botaoEnviar" type="submit" class="btn" style="background-color: darkred; color: white">Enviar</button>
+                                        <a href="index.php" class="btn" style="background-color: darkred; color: white">Voltar</a>
                                     </div>
                                 </div>
                             </form>

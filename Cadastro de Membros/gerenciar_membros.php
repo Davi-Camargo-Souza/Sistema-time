@@ -32,8 +32,8 @@
 <body class="corpo">
     <main>
         <div>
-            <button id="voltar-btn" class="btn btn-danger" onclick="voltarPagina()"><i class="fa-solid fa-arrow-left"></i></button>
-            <button id="sair-btn" class="btn btn-danger" onclick="sair()"><i class="fa-solid fa-right-to-bracket"></i></button>
+            <button id="voltar-btn" class="btn" onclick="voltarPagina()" style="background-color: darkred; color: white;"><i class="fa-solid fa-arrow-left"></i></button>
+            <button id="sair-btn" class="btn" onclick="sair()" style="background-color: darkred; color: white"><i class="fa-solid fa-right-to-bracket"></i></button>
         </div>
         <div class="centralizar">
             <div class="conteiner">
@@ -47,7 +47,7 @@
                             <div class='card-body'>";
 
                     if ($result->num_rows == 0) {
-                        echo "<h2 class='mt-2' style='text-align: center'>Não há membros cadastrados.</h2>";
+                        echo "<h2 class='mt-2' style='text-align: center; color: darkred'>Não há membros cadastrados.</h2>";
                     } else {
                         $temMembros = True;
                         $sql = "SELECT idMembro, nome, funcoes.nomeFuncao, 
@@ -64,10 +64,10 @@
 
                         $result = $conn->query($sql);
                         if ($result->num_rows == 0) {
-                            echo "<h3 class='mt-2' style='text-align: center'>Não há jogadores cadastrados</h3>";
+                            echo "<h3 class='mt-2' style='text-align: center; color: darkred'>Não há jogadores cadastrados</h3>";
                         } else {
-                            echo "<h2 style='text-align: center'>Jogadores</h2>
-                                    <div class='row' style='text-align: center'>
+                            echo "<h2 style='text-align: center; color: darkred'>Jogadores</h2>
+                                    <div class='row mb-1 rounded' style='text-align: center; background-color: darkred; color: white'>
                                         <div class='col'><strong>ID Membro</strong></div>
                                         <div class='col'><strong>ID Jogador</strong></div>
                                         <div class='col'><strong>Nome</strong></div>
@@ -90,7 +90,7 @@
                                 $linkExclusao = "excluir_membros.php?idjogador=".urlencode($idJogador);
                                 $linkAtualizacao = "atualizar_membros.php?idjogador=".urlencode($idJogador);
                                 
-                                echo "<div class='row' style='text-align: center'>
+                                echo "<div class='row align-items-center' style='text-align: center'>
                                         <div class='col'>$idMembro</div>
                                         <div class='col'>$idJogador</div>
                                         <div class='col'>$nome</div>
@@ -99,8 +99,8 @@
                                         <div class='col'>$cpf</div>
                                         <div class='col'>$dtaNasc</div>
                                         <div class='col'><a href='$linkAtualizacao'>
-                                        <button type='submit' class='btn btn-danger'><i class='fa-solid fa-pen-to-square'></i></button></a></div>
-                                        <div class='col'><button class='btn btn-danger' onclick='exibirAlertaDeConfirmacao(\"$linkExclusao\")'><i class='fa-solid fa-trash'></i></button></div>
+                                        <button type='submit' class='btn' style='background-color: darkred; color: white'><i class='fa-solid fa-pen-to-square'></i></button></a></div>
+                                        <div class='col'><button class='btn' onclick='exibirAlertaDeConfirmacao(\"$linkExclusao\")' style='background-color: darkred; color: white'><i class='fa-solid fa-trash'></i></button></div>
                                     </div>";
                             }
                             echo "</div>";
@@ -125,16 +125,16 @@
                     if ($temMembros && $result->num_rows == 0) {
                         echo "<div class='card mb-3'>
                             <div class='card-body'>
-                                <h3 class='mt-2' style='text-align: center'>Não há Técnicos cadastrados</h3>
+                                <h3 class='mt-2' style='text-align: center; color: darkred'>Não há Técnicos cadastrados</h3>
                             </div>
                         </div>";
                     } else if ($result->num_rows > 0) {
-                        echo "<div class='card mb-3>
+                        echo "<div class='card mb-3'>
                                 <div class='card-body'>
                                     <div>
-                                        <h2 class='mt-3' style='text-align: center'>Comissão Técnica</h2>
+                                        <h2 style='text-align: center; color: darkred'>Comissão Técnica</h2>
                                     </div>
-                                    <div class='row' style='text-align: center'>
+                                    <div class='row mb-1 rounded' style='text-align: center; background-color: darkred; color: white'>
                                         <div class='col'><strong>ID Membro</strong></div>
                                         <div class='col'><strong>ID Técnico</strong></div>
                                         <div class='col'><strong>Nome</strong></div>
@@ -156,7 +156,7 @@
                                     $linkExclusao = "excluir_membros.php?idtecnico=".urlencode($idTecnico);
                                     $linkAtualizacao = "atualizar_membros.php?idtecnico=".urlencode($idTecnico);
 
-                                    echo "<div class='row' style='text-align: center'>
+                                    echo "<div class='row align-items-center' style='text-align: center'>
                                             <div class='col'>$idMembro</div>
                                             <div class='col'>$idTecnico</div>
                                             <div class='col'>$nome</div>
@@ -164,8 +164,8 @@
                                             <div class='col'>$cpf</div>
                                             <div class='col'>$dtaNasc</div>
                                             <div class='col'><a href='$linkAtualizacao'>
-                                            <button type='submit' class='btn btn-danger'><i class='fa-solid fa-pen-to-square'></i></button></a></div>
-                                            <div class='col'><button class='btn btn-danger' onclick='exibirAlertaDeConfirmacao(\"$linkExclusao\")'><i class='fa-solid fa-trash'></i></button></div>
+                                            <button type='submit' class='btn' style='background-color: darkred; color: white'><i class='fa-solid fa-pen-to-square'></i></button></a></div>
+                                            <div class='col'><button class='btn' onclick='exibirAlertaDeConfirmacao(\"$linkExclusao\")' style='background-color: darkred; color: white'><i class='fa-solid fa-trash'></i></button></div>
                                         </div>";
                                 }
                                 echo "</div>

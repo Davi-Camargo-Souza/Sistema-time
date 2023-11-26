@@ -32,19 +32,22 @@
 <body class="corpo">
     <main class="centralizar">
     <div class="container">
+        <div class="mb-5" style="text-align: center; color: darkred">
+            <h3>Sistema do Time Jaguara</h3>
+        </div>
         <div class="row">
             <div class="col-md-6">
-                <div class="card border-primary mb-3">
+                <div class="card mb-3" style="border-color: darkred;">
                     <div class="card-body">
-                        <h5 class="card-title"><a href="cadastro_membros.php">Cadastrar Membros</a></h5>
+                        <h5 class="card-title"><a href="cadastro_membros.php" style="color: darkred">Cadastrar Membros</a></h5>
                         <p class="card-text">Insira os dados e selecione a função do membro do time.</p>
                     </div>
                 </div>
             </div>
             <div class="col-md-6">
-                <div class="card border-primary mb-3">
+                <div class="card mb-3" style="border-color: darkred;">
                     <div class="card-body">
-                        <h5 class="card-title"><a href="gerenciar_membros.php">Gerenciar Membros</a></h5>
+                        <h5 class="card-title"><a href="gerenciar_membros.php" style="color: darkred">Gerenciar Membros</a></h5>
                         <p class="card-text">Veja todos os membros cadastrados, e altere seus dados.</p>
                     </div>
                 </div>

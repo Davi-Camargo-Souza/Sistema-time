@@ -82,15 +82,15 @@
 <body class="corpo">
     <main>
         <div>
-            <button id="voltar-btn" class="btn btn-danger" onclick="voltarPagina('atualizar')"><i class="fa-solid fa-arrow-left"></i></button>
-            <button id="sair-btn" class="btn btn-danger" onclick="sair()"><i class="fa-solid fa-right-to-bracket"></i></button>
+            <button id="voltar-btn" class="btn" onclick="voltarPagina()" style="background-color: darkred; color: white;"><i class="fa-solid fa-arrow-left"></i></button>
+            <button id="sair-btn" class="btn" onclick="sair()" style="background-color: darkred; color: white"><i class="fa-solid fa-right-to-bracket"></i></button>
         </div>
         <div class="centralizar">
             <div class="conteiner">
                 <div class="row">
                     <div class="col-lg-4 offset-lg-4">
-                        <div class="card border-danger">
-                            <div class="card-body">
+                        <div class="card" style="border-color: darkred">
+                            <div class="card-body" style="color: darkred">
                                 <h2>Atualizar cadastros</h2>
                             </div>
                             <div class="card-body">
@@ -132,7 +132,7 @@
                                     </div>
                                     <div>
                                         <div class="mb-3">
-                                            <button id="botaoEnviar" type="submit" class="btn btn-danger">Enviar</button>
+                                            <button id="botaoEnviar" type="submit" class="btn" style="background-color: darkred; color: white">Enviar</button>
                                         </div>
                                     </div>
                                     <?php
