@@ -73,7 +73,7 @@
                                 $linkExclusao = "excluir_membros.php?idjogador=".urlencode($idJogador);
                                 $linkAtualizacao = "atualizar_membros.php?idjogador=".urlencode($idJogador);
                                 
-                                echo "<div class='row align-items-center' style='text-align: center'>
+                                echo "<div class='row align-items-center mb-1' style='text-align: center'>
                                         <div class='col'>$idMembro</div>
                                         <div class='col'>$idJogador</div>
                                         <div class='col'>$nome</div>
@@ -139,7 +139,7 @@
                                     $linkExclusao = "excluir_membros.php?idtecnico=".urlencode($idTecnico);
                                     $linkAtualizacao = "atualizar_membros.php?idtecnico=".urlencode($idTecnico);
 
-                                    echo "<div class='row align-items-center' style='text-align: center'>
+                                    echo "<div class='row align-items-center mb-1' style='text-align: center'>
                                             <div class='col'>$idMembro</div>
                                             <div class='col'>$idTecnico</div>
                                             <div class='col'>$nome</div>

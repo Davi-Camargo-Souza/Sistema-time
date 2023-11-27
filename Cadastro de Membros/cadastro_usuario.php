@@ -36,7 +36,7 @@
                                         <label for="senha">Senha</label>
                                         <input id="senha" type="password" name="senha" class="form-control mb-3" onkeyup="validarSenha()" required>
                                         <button id="verSenhaButton" type="button" class="btn mb-3" onclick="mostrarSenha()"><i class="fa-solid fa-eye"></i></button>
-                                        <div class="bg-danger rounded sm">
+                                        <div class="rounded sm" style="background-color: darkred; color: white">
                                             <span id="senhaError" class="text-white"></span>
                                         </div>
                                     </div>
