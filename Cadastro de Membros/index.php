@@ -1,3 +1,4 @@
+<!-- pagina inicial, onde o usuario faz login para ter acesso as outras paginas da aplicação -->
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>

@@ -1,4 +1,5 @@
 <?php
+    // processa as alterações no cadastro dos membros
     include("tratamento_inatividade.php");
     include("config.php");
     $idMembro = $_POST["idMembro"];

@@ -1,3 +1,4 @@
+<!-- realiza o cadastro dos usuarios que vão ter permissão para acessar as paginas do site -->
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>

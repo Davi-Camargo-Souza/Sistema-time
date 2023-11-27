@@ -1,4 +1,5 @@
 <?php
+    // pagina para editar os dados de um membro do time selecionado pela pagina gerenciar membros
     include("tratamento_inatividade.php");
     include('config.php');
     if (isset($_GET['idtecnico'])) {

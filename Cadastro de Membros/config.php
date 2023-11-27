@@ -1,8 +1,10 @@
 <?php
+    // configuração do banco de dados
+    // caso o banco não tenha sido criado mas o usuario tente fazer uma consulta a ele por meio do front, ele é criado automaticamente
     $servername = "localhost";
     $username = "root";
     $password = "";
-    $base = "cadastromembros";
+    $base = "sistematime";
 
     try {
         $conn = mysqli_connect($servername, $username, $password);
@@ -14,7 +16,7 @@
         print "<script>window.history.back()</script>";
     }
 
-    $sql = "CREATE SCHEMA IF NOT EXISTS cadastromembros";
+    $sql = "CREATE SCHEMA IF NOT EXISTS sistematime";
     $result = $conn->query($sql);
 
     if ($result === TRUE) {

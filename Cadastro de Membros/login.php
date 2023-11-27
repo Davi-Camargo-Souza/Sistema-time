@@ -1,4 +1,5 @@
-<?php 
+<?php
+    // esse arquivo processa o login, validando se os dados passados pertencem a um cadastro de usuario
     session_start();
     include("config.php");
     $usuario = $_POST["usuario"];

@@ -1,4 +1,5 @@
 <?php
+    // essa pagina processa a exclusao do membro selecionado na pagina gerenciar membros
     include("tratamento_inatividade.php");
     include("config.php");
     if (isset($_GET["idtecnico"])) {

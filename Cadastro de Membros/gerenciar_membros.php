@@ -1,7 +1,7 @@
 <?php
     include("tratamento_inatividade.php");
 ?>
-
+<!-- nessa pagina o usuario pode gerenciar os membros já cadastrados, podendo edita-los e exclui-los -->
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -21,6 +21,7 @@
         <div class="centralizar">
             <div class="conteiner">
                 <?php
+                // começamos verificando se há membros cadastrados
                     include("config.php");
                     $temMembros = False;
                     $sql = "SELECT * FROM membros";
@@ -28,10 +29,11 @@
 
                     echo "<div class='card mb-3'>
                             <div class='card-body'>";
-
+                    // caso não tenha ele exibe essa mensagem:
                     if ($result->num_rows == 0) {
                         echo "<h2 class='mt-2' style='text-align: center; color: darkred'>Não há membros cadastrados.</h2>";
                     } else {
+                        // caso tenha, ele verifica se há jogadores
                         $temMembros = True;
                         $sql = "SELECT idMembro, nome, funcoes.nomeFuncao, 
                                 cpf, dtaNasc, cadastro_jogadores.numero, 
@@ -46,6 +48,7 @@
                                 ORDER BY idMembro ASC";
 
                         $result = $conn->query($sql);
+                        // se não houver, exibe essa mensagem:
                         if ($result->num_rows == 0) {
                             echo "<h3 class='mt-2' style='text-align: center; color: darkred'>Não há jogadores cadastrados</h3>";
                         } else {

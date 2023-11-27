@@ -1,4 +1,5 @@
 <?php 
+    // processa o cadastro dos membros do time
     include("tratamento_inatividade.php");
     include("config.php");
     $documento = $_POST["documento"];

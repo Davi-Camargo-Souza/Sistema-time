@@ -2,6 +2,7 @@
     include("tratamento_inatividade.php");
 ?>
 
+<!-- cadastro de membros do time de futebol -->
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>

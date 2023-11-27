@@ -2,6 +2,7 @@
     include("tratamento_inatividade.php");
 ?>
 
+<!-- essa é a pagina inicial do nosso site, logo após o úsuario fazer login, ele é redirecionado para ela -->
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
