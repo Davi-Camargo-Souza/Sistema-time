@@ -1,4 +1,4 @@
-# cadastroTime
+# Sistema de um Time de Futebol Ficticio
 
 Site desenvolvido para uma atividade da minha faculdade.
 A proposta é: um sistema de gerenciamento de membros de um time de futebol, onde pode ser inserido e admnistrado jogadores e membros da comissão técnica.
